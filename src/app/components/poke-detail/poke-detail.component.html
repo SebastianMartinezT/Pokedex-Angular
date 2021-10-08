@@ -1,0 +1,40 @@
+<div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+  <div fxLayout="column">
+    <mat-card class="card">
+      <!-- <div fxLayout="column">First</div>
+      <div fxLayout="column">Second</div>
+     -->
+      <mat-card-header>
+        <img mat-card-avatar class="header-image" src="{{pokemonImg}}">
+        <mat-card-title>{{pokemon.name}}</mat-card-title>
+        <mat-card-subtitle>Nº {{pokemon.id}}</mat-card-subtitle>
+      </mat-card-header>
+  
+      <img mat-card-image src="{{pokemonImg}}" alt="pokemon">
+  
+      <mat-card-content>
+        <mat-chip-list>
+          <mat-chip color="primary">Type: {{pokemonType}}</mat-chip>
+          <mat-chip color="primary">Height: {{pokemon.height}}</mat-chip>
+          <mat-chip color="primary">Weight: {{pokemon.weight}}</mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayout="column" *ngFor="let pokemon of pokemonEvolution">
+    <mat-card class="card">      
+      <mat-card-header >             
+        <mat-card-title style="text-align: center;">{{pokemon.name}}</mat-card-title>        
+      </mat-card-header>
+    
+      <img mat-card-image src="{{pokemon.image}}" alt="pokemon">
+    
+      <mat-card-content class="cardContent">        
+          <mat-chip color="primary">Type: {{pokemon.type}}</mat-chip>        
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  
+</div>
